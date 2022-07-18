@@ -18,4 +18,4 @@ export default function Country() {
             <City country_name={countryName} />
         </View>
     )
-}
+} 
