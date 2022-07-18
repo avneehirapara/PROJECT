@@ -3,11 +3,13 @@ import React from 'react'
 import Home from './app/container/Home'
 import City from './app/container/City'
 
+
 export default function App() {
   return (
     <View>
-    <Home />
-    <City />
+      <Home />
+      <City />
+     
     </View>
   )
 }
