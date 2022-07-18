@@ -31,7 +31,7 @@ export default class Home  extends Component {
         )
     }
 }   
-
+ 
 let styles = StyleSheet.create({
     name :{
         marginTop: 30,

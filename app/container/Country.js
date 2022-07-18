@@ -17,5 +17,5 @@ export default function Country() {
             </TouchableOpacity>
             <City country_name={countryName} />
         </View>
-    )
+    ) 
 } 
