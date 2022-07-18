@@ -1,3 +1,4 @@
+
 // Country      countryName
 // City         cityName, famousPlace   // ternary operator
 import { Text, TouchableOpacity, View ,StyleSheet } from 'react-native'
@@ -41,13 +42,13 @@ let styles = StyleSheet.create({
       },
       btn: {
         backgroundColor: 'grey',
-        height: 50,
-        width: 200,
+        height: 35,
+        width: 550,
         marginTop: 30,
-        marginLeft: 100,
+        marginLeft: -69,
         color: 'white',
         fontFamily: 'georgia',
-        fontSize: 25,
+        fontSize: 20,
         borderRadius: 50,
         textAlign: 'center',
         textAlignVertical: 'center',

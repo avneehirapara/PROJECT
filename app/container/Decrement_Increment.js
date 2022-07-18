@@ -1,5 +1,6 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity,StyleSheet } from 'react-native'
 import React, { useState } from 'react'
+
 
 export default function Decrement_Increment() {
     let[Number,setNumber]=useState('0');
@@ -10,16 +11,51 @@ export default function Decrement_Increment() {
         setNumber(prvNumber => prvNumber - 1);
     }
   return (
-    <View>
-      <Text>{Number}</Text>
-      
-      <TouchableOpacity onPress={increment}>
-        <Text>INCREMENT</Text>
+    <View style={StyleSheet.container}>
+      <Text style={styles.number}>NUMBERS =  {Number}</Text>
+     <View style={styles.flax}>
+     <TouchableOpacity onPress={increment}>
+        <Text style={styles.btn}>INCREMENT</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={decrement}>
-        <Text>Decrement</Text>
+        <Text style={styles.btn}>DECREMENT</Text>
       </TouchableOpacity>
+     </View>
     </View>
   )
 }
+let styles = StyleSheet.create({
+
+  number:{
+  fontSize:25,
+  textAlign:'center',
+  textAlignVertical:'center',
+  marginTop:50,
+  backgroundColor:"gray",
+  color:'black',
+  height:50,
+  width:290,
+  borderRadius:10,
+  marginLeft:55,
+  
+ },
+ btn:{
+  height:50,
+  width:130,
+  fontSize:20,
+  marginTop:70,
+  textAlign:'center',
+  textAlignVertical:'center',
+  marginTop:50,
+  backgroundColor:"gray",
+  color:'black',
+  borderRadius:20,
+ },
+ flax:{
+  alignItems:'center',
+  flexDirection:'row',
+  justifyContent:'space-around',
+ }
+
+})
