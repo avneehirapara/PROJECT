@@ -54,6 +54,7 @@ let styles = StyleSheet.create({
   backgroundColor:"gray",
   color:'black',
   borderRadius:20,
+  marginBottom:40,
  
  },
  flax:{
