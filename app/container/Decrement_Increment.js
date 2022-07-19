@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity,StyleSheet,Image } from 'react-native'
+import { View, Text, TouchableOpacity,StyleSheet,Image, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 
 
@@ -11,19 +11,21 @@ export default function Decrement_Increment() {
         setNumber(prvNumber => prvNumber - 1);
     }
   return (
-    <View style={StyleSheet.container}>
+   <ScrollView>
+     <View style={StyleSheet.container}>
       <Text style={styles.number}>NUMBERS =  {Number}</Text>
      <View style={styles.flax}>
      <TouchableOpacity onPress={increment}>
         <Text style={styles.btn}>INCREMENT</Text>
       </TouchableOpacity>
-
+ 
       <TouchableOpacity onPress={decrement}>
         <Text style={styles.btn}>DECREMENT</Text>
       </TouchableOpacity>
      </View>
-     <Image  style={styles.Image}source={require('../container/img.jpg')} />
+
     </View>
+   </ScrollView>
   )
 }
 let styles = StyleSheet.create({
@@ -59,18 +61,6 @@ let styles = StyleSheet.create({
   flexDirection:'row',
   justifyContent:'space-around',
  },
- Image:{
-  height:200,
-  width:200,
-  marginTop:50,
-  justifyContent:'center',
-  marginLeft:100,
-  // alignItems:'center'
-  // alignContent:'center'
-  
-  
 
-
- }
 
 })

@@ -1,7 +1,7 @@
 
 // Country      countryName
 // City         cityName, famousPlace   // ternary operator
-import { Text, TouchableOpacity, View ,StyleSheet } from 'react-native'
+import { Text, TouchableOpacity, View ,StyleSheet ,Image, ScrollView} from 'react-native'
 import React, { Component } from 'react'
 
 export default class Home  extends Component {
@@ -9,19 +9,21 @@ export default class Home  extends Component {
         super(props);
 
         this.state = {
-            name: '1.' +" " + 'avnee'
+            name: '1.' +" " + 'amit'
         }
     }
 
     handleChangeName = () => {
         this.setState({
-           name: '1.' +" " +  'amit' 
+           name: '1.' +" " +  'patel' 
         })
     }
 
     render() {
         return (
-            <View style = {StyleSheet.container}>
+           <ScrollView>
+             <View style = {StyleSheet.container}>
+                     <Image  style={styles.Image}source={require('../container/img.jpg')} />
                 <Text  style={styles.name}>{this.state.name}</Text>
                 <TouchableOpacity 
                     onPress={this.handleChangeName}
@@ -29,8 +31,9 @@ export default class Home  extends Component {
                     <Text  style = {styles.btn}>Change Name</Text>
                 </TouchableOpacity>
             </View>
+           </ScrollView>
         )
-    }
+    } 
 }   
 
 let styles = StyleSheet.create({
@@ -54,5 +57,12 @@ let styles = StyleSheet.create({
         textAlignVertical: 'center',
     
       },
+      Image:{
+        height:250,
+        width:400,
+        justifyContent:'center',
+        marginLeft:0,
+        
+       }
 
 })
