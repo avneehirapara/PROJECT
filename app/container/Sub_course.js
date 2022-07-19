@@ -6,7 +6,7 @@
 //     let Bonus = '';
    
 //     if(props.s < 50000){
-//             Bonus = salary*10;
+//             Bonus = salary*10/100;
             
 //         }
 //         // console.log(Bouns);
