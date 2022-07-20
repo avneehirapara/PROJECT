@@ -4,16 +4,18 @@ import Home from './app/container/Home'
 import City from './app/container/City'
 import Decrement_Increment from './app/container/Decrement_Increment'
 import Course from './app/container/Course'
+import Timer from './app/container/Timer'
 
 
 export default function App() {
   return (
   <ScrollView>
       <View>
-      <Home />
+      {/* <Home />
       <City/>
       <Decrement_Increment/>
-      <Course />
+      <Course /> */}
+      <Timer />
     </View>
   </ScrollView>
   )

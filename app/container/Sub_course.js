@@ -1,48 +1,48 @@
-// import { View, Text } from 'react-native'
-// import React from 'react'
-
-// export default function Sub_course(props) {
-//     let salary = ''; 
-//     let Bonus = '';
-   
-//     if(props.s < 50000){
-//             Bonus = salary*10/100;
-            
-//         }
-//         // console.log(Bouns);
-    
-
-//     return (
-//         <View>
-//             <Text> Employee Bonus : {Bonus}</Text>
-//             {/* <Text> Employee Total salary: {salary + Bonus}</Text> */}
-//         </View>
-//     )
-// } 
-
-
 import { View, Text ,StyleSheet} from 'react-native'
 import React from 'react'
 
 export default function Sub_course(props) {
-  let subcourse='';
+    let Bonus = 0;
+   
+    if(props.s < 50000){
+            Bonus = props.s*10/100;
+            
+        }
+        // console.log(Bouns);
+    
 
-    if(props.course === 'PROGRAMING'){
-        subcourse = 'C';
+    return (
+        <View style={StyleSheet.container}>
+            <Text style={styles.salary}> Employee Bonus : {Bonus}</Text>
+            <Text style={styles.salary}> Employee Total salary: {props.s + Bonus}</Text>
 
-    }else if(props.course === 'DISINING'){
-        subcourse = 'PHOTOSHOP';
+        </View>
+    )
+} 
 
-    }else if(props.course === 'ANIMATION'){
-        subcourse = 'VFX';
-    }
 
-  return (
-    <View style={StyleSheet.container}>
-    <Text style={styles.Text1}>sub-course : {subcourse}</Text>
-    </View>
-  )
-}
+// import { View, Text ,StyleSheet} from 'react-native'
+// import React from 'react'
+
+// export default function Sub_course(props) {
+//   let subcourse='';
+
+//     if(props.course === 'PROGRAMING'){
+//         subcourse = 'C';
+
+//     }else if(props.course === 'DISINING'){
+//         subcourse = 'PHOTOSHOP';
+
+//     }else if(props.course === 'ANIMATION'){
+//         subcourse = 'VFX';
+//     }
+
+//   return (
+//     <View style={StyleSheet.container}>
+//     <Text style={styles.Text1}>sub-course : {subcourse}</Text>
+//     </View>
+//   )
+// }
 let styles = StyleSheet.create({
 
     Text1:{
@@ -50,6 +50,12 @@ let styles = StyleSheet.create({
         backgroundColor:'#58D68D' ,
         fontSize: 20,
         marginTop:30
+    },
+    salary:{
+        padding:20,
+        backgroundColor:'#58D68D' ,
+        fontSize: 20,
+        margin:20
     },
 
 
