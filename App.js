@@ -5,6 +5,7 @@ import City from './app/container/City'
 import Decrement_Increment from './app/container/Decrement_Increment'
 import Course from './app/container/Course'
 import Timer from './app/container/Timer'
+import TImeFun from './app/container/TImeFun'
 
 
 export default function App() {
@@ -15,7 +16,8 @@ export default function App() {
       <City/>
       <Decrement_Increment/>
       <Course /> */}
-      <Timer />
+      {/* <Timer /> */}
+      <TImeFun /> 
     </View>
   </ScrollView>
   )

@@ -37,56 +37,72 @@
 
 //     //2. Display (Whenever state value changed);
 //     render() {
+//         console.log(this.state.time);
 //         return (
-//             <View style={StyleSheet.container}>
+//             <View style={StyleSheet.body}>
+            
 //                 <Text style={styles.time}>{this.state.time.toLocaleTimeString()}</Text>
 //             </View>
 //         )
 //     }
 // }
-let styles = StyleSheet.create({
-      color:'red',
+let styles =StyleSheet.create({
+time:{
+    fontSize:50,
+    margin:90,
+    
+},
+
 })
 
-import { Text, View, StyleSheet } from 'react-native'
+
+  
+import { Text, View,StyleSheet } from 'react-native'
 import React, { Component } from 'react'
 
 export default class Timer extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            time: new Date()
-        }
+
+         this.state = {
+            time:new Date()
+         }
     }
 
-    tick = () => {
-        this.setState = ({
-            time: new Date()
+    tick = () =>{
+        this.setState({
+            time:new Date()
         })
-
-
-
-        componentDidMount = () => {
-            this.time = setInterval(() => {
-                this.tick()
-            }, 1000);
-        }
-        componentDidUpdate = (prevProps, prevState) => {
-            if (prevState.time !== this.state.time) {
-                console.log("tt");
-            }
-        }
-
-        componentWillUnmount = () => {
-            clearInterval(this.time)
-        }
     }
-    render() {
-        return (
-            <View style={StyleSheet.container}>
-                <Text style={styles.Text}>{this.state.time.toLocaleTimeString()}</Text>
-            </View>
-        )
+
+    componentDidMount = () => {
+        this.time = setInterval(()=>{
+            this.tick()
+        },1000)
     }
+    
+    componentDidUpdate = (prevProps,prevState) =>{
+       if(prevState.time !== this.state.time){
+
+       }
+    }
+
+    componentWillUnmount =()=>{
+        clearInterval(this.time) 
+    }
+    
+  render() {
+    console.log(this.state.time);
+    return (
+      <View style={StyleSheet.container}>
+        <Text style={styles.time}>{this.state.time.toLocaleTimeString()}</Text>
+      </View>
+    )
+  }
 }
 
+    
+
+
+
+      
