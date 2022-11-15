@@ -6,18 +6,20 @@ import Decrement_Increment from './app/container/Decrement_Increment'
 import Course from './app/container/Course'
 import Timer from './app/container/Timer'
 import TImeFun from './app/container/TImeFun'
+import Clac from './app/container/Clac'
 
 
 export default function App() {
   return (
   <ScrollView>
       <View>
-      {/* <Home />
+      <Home />
       <City/>
       <Decrement_Increment/>
-      <Course /> */}
+      <Course />
       {/* <Timer /> */}
-      <TImeFun /> 
+      {/* <TImeFun />  */}
+      {/* <Clac /> */}
     </View>
   </ScrollView>
   )
